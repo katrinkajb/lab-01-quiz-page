@@ -19,11 +19,11 @@ HTML:
     An empty, secret div
         -to inject/display results
 
-1) Get DOM elements
+<!-- 1) Get DOM elements
     -button
     -secret div
 2) Add event listeners
-    -button
+    -button -->
 3) Respond to user input (in the cool zone)
     -Launch an alert
     -Launch a confirmation

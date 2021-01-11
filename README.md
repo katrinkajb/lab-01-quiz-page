@@ -1,8 +1,9 @@
 # lab-01-quiz-page
 
 Outcomes:
+    
     There should be an alert
-    There should be a confirm so the user can opt out
+    There should be a confirm so the user can opt out of the quiz
     There should be a first name and a last name prompt
     There should be 3 question prompts
     The user should be able to see their results after taking the quiz
@@ -12,6 +13,7 @@ Outcomes:
 HTML:
     Some info with an image and some list items
         -So user knows what to do
+        -3 sections and an image
     button
         -to launch quiz
     An empty, secret div

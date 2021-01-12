@@ -1,5 +1,4 @@
-import {countsAsAYes} from './utils.js'
-import {correctPercentage} from './utils.js'
+import { countsAsAYes , correctPercentage } from './utils.js'
 
 const quizButton = document.getElementById('quiz-button');
 const resultsDisplay = document.getElementById('results-area');

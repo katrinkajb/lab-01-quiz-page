@@ -1,24 +1,17 @@
 
 body {
-    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
-/* 
-    /* --color1: hsla(45, 86%, 83%, 1);
-    --color2: hsla(135, 65%, 98%, 1);
-    --color3: hsla(315, 37%, 86%, 1);
-    --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
+    --color1: rgb(244, 241, 222);
+    --color2: rgb(61, 64, 91);
+    --color3: rgb(83, 144, 217);
+    --color4: rgb(100, 223, 223);
+    --color5: rgb(129, 178, 154);
     
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
     --footer-height: 25px;
     
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     background-color: var(--color2);
 }
 
@@ -46,24 +39,38 @@ section {
 }
 
 header {
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: var(--color4);
     height: var(--header-height);
     box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 800;
 }
 
 footer {
     display: flex;
     justify-content: flex-end;
     background-color: var(--color3);
-    box-shadow: var(--shadow);
 }
 
 
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
+    margin-top: 10px;
+}
+
+#pics {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-color: var(--color2);
+    border-radius: 5px;
+    justify-content: center;
+    justify-self: center;
 }
 
 .gutter-right {
@@ -77,8 +84,6 @@ h2 {
 header img {
     height: var(--header-height);
 }
-
-
 
 content {
     width: 80%;
@@ -95,25 +100,10 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: var(--color4);
     box-shadow: var(--shadow);
 }
-  
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
 
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
-
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
-
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
-
-  }
+#results-area {
+    background-color: var(--color5);
+}

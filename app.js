@@ -1,4 +1,5 @@
 import {countsAsAYes} from './utils.js'
+import {correctPercentage} from './utils.js'
 
 const quizButton = document.getElementById('quiz-button');
 const resultsDisplay = document.getElementById('results-area');
@@ -12,6 +13,7 @@ quizButton.addEventListener('click', () => {
     let correctAnswers = 0;
 
     const firstName = prompt('What is your first name?')
+    // const responseFirst = firstName.textContent
     const lastName = prompt('What is your last name?')
 
     const answer1 = prompt('Does the word "nudibranch" come from both greek and latin? Yes/No')
@@ -26,7 +28,21 @@ quizButton.addEventListener('click', () => {
     if (countsAsAYes(answer3))
         correctAnswers++;
     
-    const resultsArea = document.getElementById('results-area');
-    const resultsString = `Hi ${firstName} ${lastName}! You got ${correctAnswers} correct!`;
-    resultsArea.textContent = resultsString;
+    const resultsString100 = `Congrats ${firstName} ${lastName}! You got ${correctPercentage(correctAnswers)}% correct!`;
+    const resultsString66 = `Not bad, ${firstName} ${lastName}. You got ${correctPercentage(correctAnswers)}% correct!`;
+    const resultsString33 = `You did OK, ${firstName} ${lastName}. You got ${correctPercentage(correctAnswers)}% correct.`;
+    const resultsString0 = `Did you even read the info, ${firstName} ${lastName}?! You got ${correctPercentage(correctAnswers)}% correct.`;
+    
+    if (correctAnswers === 3)
+        {resultsDisplay.textContent = resultsString100;
+        resultsDisplay.style.backgroundColor = 'green'}
+    else if (correctAnswers === 2)
+        {resultsDisplay.textContent = resultsString66;
+        resultsDisplay.style.backgroundColor = 'yellow'}
+    else if (correctAnswers === 1)
+        {resultsDisplay.textContent = resultsString33;
+        resultsDisplay.style.backgroundColor = 'orange'}
+    else
+        {resultsDisplay.textContent = resultsString0;
+        resultsDisplay.style.backgroundColor = 'red'};
 })
